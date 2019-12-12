@@ -1,0 +1,21 @@
+server:
+  port: 5003
+
+spring:
+  application:
+    name: geyecloud-code
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 12345678*
+    url: jdbc:mysql://10.0.0.173:3306/webcore2?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+  returnPageInfo: check
